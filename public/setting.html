@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Setting</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="description" content="" />
+  <link rel="stylesheet" type="text/css" href="scss\main.scss" />
+  <link rel="icon" href="images\favicon.png">
+</head>
+<body>
+  <button type="submit">Save</button>
+
+  <form id="setting">
+    <div class="reminder">
+      <label for="reminder">Reminder Setting </label>
+      <input type="button" value="On" onclick="reminder()">
+      <input type="button" value="Off" onclick="reminder()">
+      <br>
+    
+      <label for="music">Sound </label>
+      <select name="music" id="musicSelect">
+        <option value="">Select One</option>
+        <option value="music">Stars</option>
+      </select>
+      <br>
+    
+      <label for="volume">Volume </label>
+      <input type="range" id="volume" min="1" max="100" value="50">
+    </div>
+  
+    <div class="other">
+      <h3>User Profile</h3>
+      <label for="name">User Name: </label>
+      <input type="text" name="name" id="nameInput">
+      <br>
+      
+      <label for="photo">User Photo </label>
+      <figure class="img-container">
+        <img src="images\default-photo.png" alt="User Photo" style="width:10%">
+      </figure>
+      <input type="file" name="photo" id="photoInput">
+      <br>
+
+    </div>
+  </form>
+
+  <script src="setting.js"></script>
+</body>
+</html>

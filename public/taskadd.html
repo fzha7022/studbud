@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Task List</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="description" content="" />
+  <link rel="stylesheet" type="text/css" href="scss\main.scss" />
+  <link rel="icon" href="images\favicon.png">
+</head>
+<body>
+  <div class="main">
+    <label for="task">Task: </label>
+    <input type="text" name="task" id="taskInput">
+    <select name="group" id="groupInput">
+      <option value="all">All</option>
+    </select>
+  
+    <form id="taskform">
+      <label for="dod"></label>
+      <select name="dod" id="dodInput" required>
+        <option value="do">Do at</option>
+        <option value="due">Due at</option>
+      </select>
+
+      <label for="time"></label>
+      <input type="time" name="time" id="timeInput">
+
+      <label for="date"></label>
+      <input type="date" name="date" id="dateInput">
+      <br>
+
+      <label for="description">Description: </label>
+      <input type="text" name="description" id="descriptionInput">
+      <br>
+  
+      <label for="priority">Priority: </label>
+      <select name="priority" id="priorityInput" required>
+        <option value="">   </option>
+        <option value="low">Low</option>
+        <option value="medium">Medium</option>
+        <option value="high">High</option>
+      </select>
+      <br>
+  
+      <label for="estimateTime">Estimated Completion Time (in mins): </label>
+      <input type="number" name="estimateTime" id="estimateTimeInput">
+      <br>
+  
+      <label for="taskComplete">Completion: </label>
+      <select name="taskComplete" id="taskCompleteInput">
+        <option value="not done">Not Done</option>
+        <option value="done">Done</option>
+      </select>
+      <br>
+  
+      <button type="submit" id="taskSave">Save</button>
+    </form>
+
+  </div>
+  <div id="snackbar">Saved!</div>
+
+  <script src="taskadd.js"></script>
+</body>
+</html>
