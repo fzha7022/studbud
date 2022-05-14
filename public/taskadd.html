@@ -12,8 +12,9 @@
   <div class="main">
     <label for="task">Task: </label>
     <input type="text" name="task" id="taskInput">
-    <select name="group" id="groupInput">
+    <select name="group" id="groupInput" onchange="groupCreate()">
       <option value="all">All</option>
+      <option value="new">create</option>
     </select>
   
     <form id="taskform">

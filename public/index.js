@@ -1,32 +1,20 @@
-//const navSwitch = document.getElementById("switch");
-
-/* navSwitch.addEventListener("click", function switchNav(){
-    let navSwitchOn = True;
-    if (navSwitchOn === True) {
-      closeNav();
-      navSwitchOn = False;
-    }else{
-      openNav();
-      navSwitchOn = True;
-    }
-}) */
+let navSwitchOn = true;
 
 function switchNav(){
-  let navSwitchOn = True;
-  if (navSwitchOn === True) {
+  if (navSwitchOn === true) {
     closeNav();
-    navSwitchOn = False;
+    navSwitchOn = false;
   }else{
     openNav();
-    navSwitchOn = True;
+    navSwitchOn = true;
   }
 }
 
 function openNav() {
-    document.getElementByClassName("navigation").style.width = "250px";
-    document.getElementByClassName("main").style.marginLeft = "250px";
+    document.getElementsByClassName('navigation')[0].style.width = "250px";
+    document.getElementsByClassName("main")[0].style.marginLeft = "250px";
 }
 function closeNav() {
-    document.getElementByClassName("navigation").style.width = "0";
-    document.getElementByClassName("main").style.marginLeft = "0";
+    document.getElementsByClassName("navigation")[0].style.width = "0";
+    document.getElementsByClassName("main")[0].style.marginLeft = "0";
 }

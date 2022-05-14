@@ -12,6 +12,14 @@ var priorityInput = document.getElementById("priorityInput");
 var estimateTimeInput = document.getElementById("estimateTimeInput");
 var taskCompleteInput = document.getElementById("taskCompleteInput");
 
+function groupCreate(){
+    if (groupInput.options[groupInput.selectedIndex].value === "create"){
+        let groupNew = document.createElement("input");
+        groupNew.type = "text";
+        groupInput.appendChild(groupNew);
+    }
+}
+
 button.addEventListener("click", function(event){
     event.preventDefault();
     let name = taskInput.value;
@@ -26,12 +34,10 @@ button.addEventListener("click", function(event){
     addTask(name, group, dod, time, date, description, priority, estimateTime, taskComplete);
     var bar = document.getElementById("snackbar");
     bar.className = "show";
-    setTimeout(function(){ bar.className = bar.className.replace("show", ""); }, 3000);
+    setTimeout(function(){ bar.className = bar.className.replace("show", ""); }, 300);
 })
 
 function addTask(name, group, dod, time, date, description, priority, estimateTime, taskComplete){
-    //let d = new Date();
-    //let dateCreated = d.getFullYear();
     let task = {
         name,
         group,
@@ -44,5 +50,5 @@ function addTask(name, group, dod, time, date, description, priority, estimateTi
         taskComplete
     };
     taskList.push(task);
-    localStorage.setItem(name, JSON.stringify({task}));
+    localStorage.setItem("taskList", JSON.stringify({taskList}));
 }
