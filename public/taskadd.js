@@ -32,9 +32,8 @@ button.addEventListener("click", function(event){
     let estimateTime = estimateTimeInput.value;
     let taskComplete = taskCompleteInput.options[taskCompleteInput.selectedIndex].value;
     addTask(name, group, dod, time, date, description, priority, estimateTime, taskComplete);
-    var bar = document.getElementById("snackbar");
-    bar.className = "show";
-    setTimeout(function(){ bar.className = bar.className.replace("show", ""); }, 300);
+    button.innerHTML = "Saved";
+   //button.attributes = "disabled";
 })
 
 function addTask(name, group, dod, time, date, description, priority, estimateTime, taskComplete){

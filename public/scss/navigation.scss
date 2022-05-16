@@ -12,22 +12,29 @@
     transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
     background-color: #aee495;
 
+    #help #setting #user {
+      float: left;
+    }
+
     button {
-      color: $orange;
+      background-color: $orange;
       display: block;
       transition: 0.3s;
 
       &:hover {
-        color: $orangeD;
+        background-color: $orangeD;
       }
     }
   }
 
-  /* Style page content - use this if you want to push the page content to the right when you open the side navigation */
 .main {
     transition: margin-left .5s;
     padding: 20px;
     margin:260px;
+
+    #switch{
+      margin-left: -10px;
+    }
   }
   
   /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */

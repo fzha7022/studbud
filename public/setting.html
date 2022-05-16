@@ -9,41 +9,55 @@
   <link rel="icon" href="images\favicon.png">
 </head>
 <body>
-  <button type="submit">Save</button>
+  <div class="navigation">
+    <ul>
+      <button id="community"><a href='comm.html'>fhg</a></button>
+      <button id="resource"><a href='resource.html'>ghfgh</a></button>
+      <button id="timer"><a href='timer.html'>fgf</a></button>
+      <button id="help"><a href='help.html'>gfhg</a></button>
+      <button id="setting"><a href='setting.html'>ghfg</a></button>
+      <button id="user"><a href='user.html'>ghgfj</a></button>
+    </ul>
+  </div>
 
-  <form id="setting">
-    <div class="reminder">
-      <label for="reminder">Reminder Setting </label>
-      <input type="button" value="On" onclick="reminder()">
-      <input type="button" value="Off" onclick="reminder()">
-      <br>
-    
-      <label for="music">Sound </label>
-      <select name="music" id="musicSelect">
-        <option value="">Select One</option>
-        <option value="music">Stars</option>
-      </select>
-      <br>
-    
-      <label for="volume">Volume </label>
-      <input type="range" id="volume" min="1" max="100" value="50">
-    </div>
-  
-    <div class="other">
-      <h3>User Profile</h3>
-      <label for="name">User Name: </label>
-      <input type="text" name="name" id="nameInput">
-      <br>
+  <div class="main">
+    <button id="switch" onclick="switchNav()">switch</button>
+    <button type="submit">Save</button>
+
+    <form id="setting">
+      <div class="reminder">
+        <label for="reminder">Reminder Setting </label>
+        <input type="button" value="On" onclick="reminder()">
+        <input type="button" value="Off" onclick="reminder()">
+        <br>
       
-      <label for="photo">User Photo </label>
-      <figure class="img-container">
-        <img src="images\default-photo.png" alt="User Photo" style="width:10%">
-      </figure>
-      <input type="file" name="photo" id="photoInput">
-      <br>
-
-    </div>
-  </form>
+        <label for="music">Sound </label>
+        <select name="music" id="musicSelect">
+          <option value="">Select One</option>
+          <option value="music">Stars</option>
+        </select>
+        <br>
+      
+        <label for="volume">Volume </label>
+        <input type="range" id="volume" min="1" max="100" value="50">
+      </div>
+    
+      <div class="other">
+        <h3>User Profile</h3>
+        <label for="name">User Name: </label>
+        <input type="text" name="name" id="nameInput">
+        <br>
+        
+        <label for="photo">User Photo </label>
+        <figure class="img-container">
+          <img src="images\default-photo.png" alt="User Photo" style="width:10%">
+        </figure>
+        <input type="file" name="photo" id="photoInput">
+        <br>
+  
+      </div>
+    </form>
+  </div>
 
   <script src="setting.js"></script>
 </body>
