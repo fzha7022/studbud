@@ -1,57 +1,44 @@
-let navSwitchOn = true;
+//toggle between calendar and quadrant
+let cal = document.getElementById("calendar");
+let qua = document.getElementById("quadrant");
+//let switchView = document.getElementById("switchView");
+cal.style.display = "block";
+qua.style.display = "none";
+function switchView() {
+  if (cal.style.display === "none") {
+    cal.style.display = "block";
+  } else {
+    cal.style.display = "none";
+    //switchView.innerHTML = "Calendar";
+  }
+  if (qua.style.display === "none") {
+    qua.style.display = "block";
+    //switchView.innerHTML = "Calendar";
+  } else {
+    qua.style.display = "none";
 
-function switchNav(){
-  if (navSwitchOn === true) {
-    closeNav();
-    navSwitchOn = false;
-  }else{
-    openNav();
-    navSwitchOn = true;
   }
 }
 
-function openNav() {
-    document.getElementsByClassName('navigation')[0].style.width = "250px";
-    document.getElementsByClassName("main")[0].style.marginLeft = "250px";
-}
-function closeNav() {
-    document.getElementsByClassName("navigation")[0].style.width = "0";
-    document.getElementsByClassName("main")[0].style.marginLeft = "0";
-}
+//drawing on canvas
+var canvas = document.getElementById("canvas");
+var x = canvas.getContext("2d");//x-axis
+x.moveTo(0, 400);
+x.lineTo(800, 400);
+x.stroke();
+var y = canvas.getContext("2d");//y-axis
+y.moveTo(400, 0);
+y.lineTo(400, 800);
+y.stroke();
 
-document.addEventListener('DOMContentLoaded', function() {
-  var calendarEl = document.getElementById('calendar');
-  var calendar = new FullCalendar.Calendar(calendarEl, {
-    initialView: 'dayGridMonth'
-  });
-  calendar.render();
-});
-
-
-var calendar = new Calendar(calendarEl, {
-  headerToolbar: { center: 'dayGridMonth,timeGridWeek' }, // buttons for switching between views
-
-  views: {
-    dayGridMonth: { // name of view
-      titleFormat: { year: 'numeric', month: '2-digit', day: '2-digit' }
-      // other view-specific options here
-    }
-  }
-});
-
-var calendar = new Calendar(calendarEl, {
-  views: {
-    dayGrid: {
-      // options apply to dayGridMonth, dayGridWeek, and dayGridDay views
-    },
-    timeGrid: {
-      // options apply to timeGridWeek and timeGridDay views
-    },
-    week: {
-      // options apply to dayGridWeek and timeGridWeek views
-    },
-    day: {
-      // options apply to dayGridDay and timeGridDay views
-    }
-  }
-});
+//the labels of the quadrant
+var u = canvas.getContext("2d");
+var notU = canvas.getContext("2d");
+var im = canvas.getContext("2d");
+var notIm = canvas.getContext("2d");
+u.font = "30px Comic Sans MS";
+u.textAlign = "center";
+u.fillText("Urgent", 750, 430);
+notU.fillText("Not Urgent", 80, 430);
+im.fillText("Important", 480, 50);
+notIm.fillText("Unimportant", 500, 780);

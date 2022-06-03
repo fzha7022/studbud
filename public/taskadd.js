@@ -1,3 +1,5 @@
+//this is the task list that I created but not working (no errors)
+
 const button = document.getElementById("taskSave");
 var taskList = [];
 
@@ -33,7 +35,7 @@ button.addEventListener("click", function(event){
     let taskComplete = taskCompleteInput.options[taskCompleteInput.selectedIndex].value;
     addTask(name, group, dod, time, date, description, priority, estimateTime, taskComplete);
     button.innerHTML = "Saved";
-   //button.attributes = "disabled";
+    button.attributes = "disabled";
 })
 
 function addTask(name, group, dod, time, date, description, priority, estimateTime, taskComplete){

@@ -10,30 +10,28 @@
     overflow-x: hidden; /* Disable horizontal scroll */
     padding-top: 60px; /* Place content 60px from the top */
     transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
-    background-color: #aee495;
-
-    #help #setting #user {
-      float: left;
-    }
+    background-color: $green;
 
     button {
       background-color: $orange;
       display: block;
       transition: 0.3s;
+      left: 5px;
+      
 
-      &:hover {
-        background-color: $orangeD;
-      }
+    :hover {
+      background-color: $orangeD;
     }
   }
+}
 
 .main {
     transition: margin-left .5s;
     padding: 20px;
-    margin:260px;
+    margin:280px;
 
     #switch{
-      margin-left: -10px;
+      margin-left: -60px;
     }
   }
   

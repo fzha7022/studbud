@@ -1,0 +1,72 @@
+<!-- copied, only few changes -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>TODO</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="description" content="" />
+  <link rel="stylesheet" type="text/css" href="scss\main.scss" />
+  <link rel="icon" href="images\favicon.png">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+
+<body>
+<!-- area of content -->
+  <div class="main">
+    <div class="container">
+        <h1>Todo</h1>
+    
+        <form class="todo-form">
+          <input type="text" class="todo-input" placeholder="Add a Todo...">
+          <button type="submit" class="add-button">Add</button>
+        </form>
+
+        <form id="taskform">
+            <label for="dod"></label>
+            <select name="dod" id="dodInput" required>
+              <option value="do">Do at</option>
+              <option value="due">Due at</option>
+            </select>
+      
+            <label for="time"></label>
+            <input type="time" name="time" id="timeInput">
+      
+            <label for="date"></label>
+            <input type="date" name="date" id="dateInput">
+            <br>
+      
+            <label for="description">Description: </label>
+            <input type="text" name="description" id="descriptionInput">
+            <br>
+        
+            <label for="priority">Priority: </label>
+            <select name="priority" id="priorityInput" required>
+              <option value="">   </option>
+              <option value="low">Low</option>
+              <option value="medium">Medium</option>
+              <option value="high">High</option>
+            </select>
+            <br>
+        
+            <label for="estimateTime">Estimated Completion Time (in mins): </label>
+            <input type="number" name="estimateTime" id="estimateTimeInput">
+            <br>
+        
+            <label for="taskComplete">Completion: </label>
+            <select name="taskComplete" id="taskCompleteInput">
+              <option value="not done">Not Done</option>
+              <option value="done">Done</option>
+            </select>
+          </form>
+    
+        <ul class="todo-items"></ul>
+      </div>
+  </div>
+
+  <script src="index.js"></script>
+  <script src="navigation.js"></script>
+  <script src="todo.js"></script>
+</body>
+</html>

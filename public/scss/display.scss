@@ -1,49 +1,60 @@
-.flip-card {
-    background-color: transparent;
-    width: 300px;
-    height: 200px;
-    border: 1px solid #f1f1f1;
-    perspective: 1000px; /* Remove this if you don't want the 3D effect */
-  }
-  
-  /* This container is needed to position the front and back side */
-.flip-card-inner {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    text-align: center;
-    transition: transform 0.8s;
-    transform-style: preserve-3d;
-  }
-  
-  /* Do an horizontal flip when you move the mouse over the flip box container */
-.flip-card:hover .flip-card-inner {
-    transform: rotateY(180deg);
-  }
-  
-  /* Position the front and back side */
-.flip-card-front, .flip-card-back {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    -webkit-backface-visibility: hidden; /* Safari */
-    backface-visibility: hidden;
-  }
-  
-  /* Style the front side (fallback if image is missing) */
-.flip-card-front {
-    background-color: #bbb;
-    color: black;
-  }
-  
-  /* Style the back side */
-.flip-card-back {
-    background-color: dodgerblue;
-    color: white;
-    transform: rotateY(180deg);
-  }
-
 #calendar {
     max-width: 1100px;
     margin: 0 auto;
   }
+
+.stopwatch{
+  background-color: #ffffff;
+  width: 40%;
+  min-width: 500px;
+  position: absolute;
+  transform: translate(-50%,-50%);
+  top: 50%;
+  left: 50%;
+  padding: 20px 0;
+  padding-bottom: 50px;
+  border-radius: 10px;
+
+  .buttons{
+    width: 90%;
+    margin: 60px auto 0 auto;
+    display: flex;
+    justify-content: space-around;
+
+    button{
+      width: 120px;
+      height: 45px;
+      background-color: #205e94;
+      color: #ffffff;
+      border: none;
+      font-family: 'Poppins',sans-serif;
+      font-size: 18px;
+      border-radius: 5px;
+      cursor: pointer;
+      outline: none;
+
+      &:nth-last-child(2){
+        background-color: #d23332;
+      }
+      &:nth-last-child(1){
+        background-color: #20b380;
+      }
+    }
+  }
+}
+
+.timerDisplay{
+  position: relative;
+  width: 92%;
+  background: #ffffff;
+  left: 4%;
+  padding: 40px 0;
+  font-family: 'Roboto mono',monospace;
+  color: #0381bb;
+  font-size: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  border-radius: 5px;
+  box-shadow: 0 0 20px rgba(0,139,253,0.25);
+}

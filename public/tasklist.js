@@ -1,28 +1,24 @@
-var cardSection = document.getElementsByClassName("flip-card");
+//this is the task list that I created but not working (no errors)
+
+var cardSection = document.getElementsByClassName("taskcard");
+var taskName = document.getElementsByTagName("p");
 
 function displayTask() {
     if (localStorage.length !== 0) {
       const reference = localStorage.getItem("taskList");
       taskList = JSON.parse(reference);
-      taskList.forEach(createCard);
+      createCard(taskList);
     }else {
       alert("You don't have any tasks right now :)");
     }
   }
 
-function createCard(obj, index, arr){
-  arr[index] = obj;
-  let taskName = obj.name;
-  let card = document.createElement("div");
-  card.className = "flip-card-inner";
-  card.id = index;
-  card.innerHTML = `<div class="flip-card-front"><p>` + taskName +
-      `</p></div>
-      <div class="flip-card-back">
-        <button id="taskedit"><a href= "taskadd.html">Edit</a></button><br>
-        <button id="delete" onclick="deleteTask()">Delete</button>
-      </div>`
-  cardSection[0].appendChild(card);
+function createCard(arr){
+  for (let i = 0; i < arr.length; i++){
+    let obj = {};
+    obj = arr[i]
+    taskName[0].innerHTML = obj.name;
+  }
 }
 
 function deleteTask(){
